@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex , nofollow" />
+    <!-- ダミーサイトなので検索表示させない -->
+    <link rel="stylesheet" href="./css/reset.css" />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>徳之島観光サイト</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header inner">
+                <a href="#"><img src="./img/logo.svg" alt="ロゴ"></a>
+                <nav class="header_menu_sp">
+                    <!-- メニューボタン(SP用) -->
+                    <input id="menu_box" type="checkbox">
+                    <label for="menu_box" class="menu_btn"><span></span></label>
+                    <label for="menu_box" class="menu_back"></label>
+                    <ul class="menu_item">
+                        <li><a href="#">特徴</a></li>
+                        <li><a href="#">島内マップ</a></li>
+                        <li><a href="#">観光地</a></li>
+                        <li><a href="#">イベント</a></li>
+                        <li><a href="#">問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <nav class="header_menu_pc">
+                    <ul>
+                        <li><a href="#">特徴</a></li>
+                        <li><a href="#">島内マップ</a></li>
+                        <li><a href="#">観光地</a></li>
+                        <li><a href="#">イベント</a></li>
+                        <li><a href="#">問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Top -->
+            <div class="top">
+                <img class="top_img_pc" src="./img/tokunoshima02.jpg" alt="Top画像">
+                <img class="top_img_sp" src="./img/tokunoshima_sp.jpg" alt="Top画像">
+                <ul class="top_news inner">
+                    <li>
+                        <a href="#">
+                            <span class="day">2022.09.30</span>
+                            <span class="new">New</span>ここにお知らせが入ります。
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="#">
+                            <span class="day">2022.10.01</span>
+                            <span class="new">New</span>ここにお知らせが入ります。
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 波の区切り -->
+            <div class="wave">
+                <img src="./img/wave.svg" alt="波の区切り">
+            </div>
+
+            <!-- 特徴 -->
+            <div class="feature">
+                <div class="subtitle inner">
+                    <h2>特徴</h2>
+                </div>
+                <div class="feature_item inner">
+                    <div class="feature_item_text">
+                        <h3>世界自然遺産に認定された自然の島</h3>
+                        <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                        <a href="#">もっと見る</a>
+                    </div>
+                    <div class="feature_item_img">
+                        <img src="./img/ハイビスカス.jpg" alt="徳之島の自然">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 波の区切り -->
+            <div class="wave">
+                <img src="./img/wave2.svg" alt="波の区切り">
+            </div>
+
+            <!-- 島内マップ -->
+            <div class="map">
+                <div class="subtitle inner">
+                    <h2>島内マップ</h2>
+                </div>
+                <div class="map_item">
+                    <img class="map_item_sp" src="./img/map.svg" alt="徳之島_SP表示">
+                    <img class="map_item_pc" src="./img/map2.svg" alt="徳之島_PC表示">
+                    <a href="#">観光地を見る</a>
+                </div>
+            </div>
+
+            <!-- 波の区切り -->
+            <div class="wave">
+                <img src="./img/wave.svg" alt="波の区切り">
+            </div>
+
+            <!-- 観光プラン -->
+            <div class="plan">
+                <div class="subtitle inner">
+                    <h2>観光プラン</h2>
+                </div>
+                <div class="plan_item inner">
+                    <div class="plan_item_img">
+                        <img src="./img/ダイビング.jpg" alt="観光スポット01">
+                    </div>
+                    <div class="plan_item_text">
+                        <h3>アクティブプラン</h3>
+                        <p>ここに観光プランの説明が入ります。ここに観光プランの説明が入ります。ここに観光プランの説明が入ります。</p>
+                        <a href="#">詳しく見る</a>
+                    </div>
+                </div>
+                <div class="plan_item inner">
+                    <div class="plan_item_img">
+                        <img src="./img/リラックス.jpg" alt="観光スポット02">
+                    </div>
+                    <div class="plan_item_text">
+                        <h3>リラックスプラン</h3>
+                        <p>ここに観光プランの説明が入ります。ここに観光プランの説明が入ります。ここに観光プランの説明が入ります。</p>
+                        <a href="#">詳しく見る</a>
+                    </div>
+                </div>
+                <div class="plan_item inner">
+                    <div class="plan_item_img">
+                        <img src="./img/防空壕.jpg" alt="観光スポット03">
+                    </div>
+                    <div class="plan_item_text">
+                        <h3>ヒストリープラン</h3>
+                        <p>ここに観光プランの説明が入ります。ここに観光プランの説明が入ります。ここに観光プランの説明が入ります。</p>
+                        <a href="#">詳しく見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 波の区切り -->
+            <div class="wave">
+                <img src="./img/wave2.svg" alt="波の区切り">
+            </div>
+
+            <!-- お役立ち記事 -->
+            <div class="article">
+                <div class="subtitle inner">
+                    <h2>お役立ち記事</h2>
+                </div>
+                <ul class="article_item inner">
+                    <li>
+                        <a href="#">
+                            <img src="./img/article01.jpg" alt="アマミノクロウサギ">
+                            <div class="article_item_text">
+                                <h3>天然記念物</h3>
+                                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/article02.jpg" alt="スキューバーダイビング">
+                            <div class="article_item_text">
+                                <h3>天然記念物</h3>
+                                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/article03.jpg" alt="闘牛">
+                            <div class="article_item_text">
+                                <h3>天然記念物</h3>
+                                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                            </div>
+                        </a>
+                    </li>
+                    <a class="article_btn" href="#">他の記事を読む</a>
+                </ul>
+            </div>
+
+            <!-- 波の区切り -->
+            <div class="wave">
+                <img src="./img/wave.svg" alt="波の区切り">
+            </div>
+
+            <div class="site_map">
+                <div class="subtitle inner">
+                    <h2>サイトマップ</h2>
+                </div>
+                <ul class="inner">
+                    <div class="upper">
+                        <li>
+                            <a href="#">
+                                <img src="./img/icon/icon01.svg" alt="特徴">
+                                <h3>特徴</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/icon/icon02.svg" alt="観光地">
+                                <h3>観光地</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/icon/icon03.svg" alt="アクセス">
+                                <h3>アクセス</h3>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="middle">
+                        <li>
+                            <a href="#">
+                                <img src="./img/icon/icon04.svg" alt="宿泊">
+                                <h3>宿泊</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/icon/icon05.svg" alt="食べ物">
+                                <h3>食べ物</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/icon/icon06.svg" alt="カメラ">
+                                <h3>写真</h3>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="lower">
+                        <li>
+                            <a href="#">
+                                <img src="./img/icon/icon07.svg" alt="お土産">
+                                <h3>お土産</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/icon/icon08.svg" alt="記事">
+                                <h3>記事</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/icon/icon09.svg" alt="問い合わせ">
+                                <h3>問い合わせ</h3>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footer inner">
+                <a href="#"><img src="./img/logo02.svg" alt="ロゴ"></a>
+                <p>鹿児島県 大島郡 徳之島町</p>
+                <p>000-00-0000</p>
+                <span>COPYRIGHT© 2024 LOGO ALL RIGHTS RESERVED</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

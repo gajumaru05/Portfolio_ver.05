@@ -1,0 +1,824 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+* {
+    -webkit-appearance: none;
+    /* webkitの装飾なし */
+    color: #5C5854;
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+h2 {
+    font-size: 1.75rem;
+    /* 28px */
+}
+
+h3 {
+    font-size: 1.5rem;
+    /* 24px */
+}
+
+p {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.3;
+}
+
+.inner {
+    margin: 0px 20px;
+}
+
+header {
+    background-color: #809cad;
+}
+
+/* ヘッダー */
+.header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+/* ヘッダーロゴ */
+.header a,
+.header a img {
+    display: block;
+}
+
+/* ヘッダーメニュー(SP表示) */
+.header .header_menu_sp {
+    display: block;
+}
+
+.header .header_menu_sp ul {
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /* メニュー画面を画面外へ */
+    z-index: 5;
+    padding: 72px 0 0 0;
+    transition: all .3s;
+    background-color: #5C5854bd;
+}
+
+.header .header_menu_sp ul li {
+    text-align: center;
+    margin: 28px 0 0 0;
+}
+
+.header .header_menu_sp ul li a {
+    display: block;
+    padding: 24px 0;
+    font-size: 15px;
+    color: #fff;
+}
+
+/* checkboxがチェックされた時、メニュー画面を画面内へ */
+#menu_box:checked~.menu_item {
+    left: 50%;
+}
+
+/* メニュー画面外をクリックしても閉じる */
+.menu_back {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    left: 100%;
+}
+
+#menu_box:checked~.menu_back {
+    left: 0;
+}
+
+/* checkbox */
+.header .header_menu_sp input[type="checkbox"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* checkboxを隠す */
+.header .header_menu_sp #menu_box {
+    display: none;
+}
+
+/* メニューアイコン */
+.header .header_menu_sp .menu_btn {
+    position: fixed;
+    top: 4px;
+    right: 4px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #809CAD;
+}
+
+/* メニューアイコンの線 */
+.menu_btn span,
+.menu_btn span:before,
+.menu_btn span:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    transition: .5s;
+    background-color: #fff;
+}
+
+.menu_btn span:before {
+    bottom: 8px;
+}
+
+.menu_btn span:after {
+    top: 8px;
+}
+
+/* メニューのアイコン変形 */
+#menu_box:checked~.menu_btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+/* メニューのアイコン変形(上) */
+#menu_box:checked~.menu_btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+/* メニューのアイコン変形(下) */
+#menu_box:checked~.menu_btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* ヘッダーメニュー(PC非表示) */
+.header .header_menu_pc {
+    display: none;
+}
+
+/* Top画面 */
+.top {
+    position: relative;
+}
+
+.top img {
+    display: block;
+    width: 100%;
+}
+
+/* PC用のTOP */
+.top .top_img_pc {
+    display: none;
+}
+
+/* スマホ用のTOP */
+.top .top_img_sp {
+    display: block;
+}
+
+.top_news {
+    display: none;
+}
+
+/* 波の区切り */
+.wave img {
+    display: none;
+}
+
+/* 特徴 */
+.feature {
+    padding: 80px 0;
+    background-color: #F0F9FF;
+}
+
+/* サブタイトル */
+.subtitle h2 {
+    text-align: center;
+    margin: 0 0 64px 0;
+    padding: 12px 26px 12px 32px;
+    /* letter-spacing分の間隔を差し引き */
+    letter-spacing: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 2.5px solid #809CAD;
+    box-shadow: 6px 6px 0 #809CAD;
+}
+
+.feature .feature_item {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.feature .feature_item .feature_item_text {
+    width: 100%;
+}
+
+.feature .feature_item .feature_item_text h3 {
+    margin: 0 0 16px 0;
+    text-align: center;
+    line-height: 1.75;
+    color: #fff;
+    background-color: #8BAD78;
+}
+
+.feature .feature_item .feature_item_text p {
+    margin: 0 0 24px 0;
+}
+
+.feature .feature_item .feature_item_text a {
+    display: block;
+    text-align: center;
+    width: 320px;
+    line-height: 1.25;
+    margin: 0 auto;
+    padding: 8px 0;
+    border-radius: 32px;
+    transition: .3s;
+    color: #fff;
+    background-color: #AD936F;
+}
+
+.feature .feature_item .feature_item_img {
+    width: 100%;
+    margin: 0 0 36px 0;
+}
+
+.feature .feature_item .feature_item_img img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+/* 島内マップ */
+.map {
+    padding: 80px 0;
+    background-color: #D2EBFB;
+}
+
+.map .subtitle h2 {
+    text-align: center;
+}
+
+.map .map_item img {
+    display: block;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.map .map_item .map_item_sp {
+    display: block;
+}
+
+.map .map_item .map_item_pc {
+    display: none;
+}
+
+/* 観光地の詳細ボタン */
+.map .map_item a {
+    display: block;
+    text-align: center;
+    width: 320px;
+    line-height: 1.25;
+    margin: 40px auto;
+    padding: 8px 0;
+    border-radius: 32px;
+    transition: .3s;
+    color: #fff;
+    background-color: #AD936F;
+}
+
+/* 観光プラン */
+.plan {
+    padding: 80px 0;
+    background-color: #F0F9FF;
+}
+
+.plan .subtitle h2 {
+    text-align: center;
+}
+
+.plan .plan_item {
+    position: relative;
+    margin-bottom: 40px;
+    counter-increment: count 1;
+    /* カウントの増加数 1 */
+}
+
+/* プランごとの表記(疑似要素) */
+.plan .plan_item::before {
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    display: block;
+    content: "Plan"counter(count);
+    text-align: center;
+    line-height: 120px;
+    /* フォントの高さ指定で中央配置 */
+    font-size: 1.25rem;
+    /* 20px */
+    transform: scale(0.8);
+    /* X軸Y軸の大きさ */
+    letter-spacing: 1px;
+    width: 120px;
+    height: 120px;
+    border: 4px solid #F0F9FF;
+    border-radius: 50%;
+    background-color: #8BAD78;
+    color: #fff;
+}
+
+.plan .plan_item .plan_item_img img {
+    display: block;
+    width: 80%;
+    margin: 0 auto 24px auto;
+    border-radius: 8px;
+}
+
+.plan .plan_item .plan_item_text h3 {
+    margin: 0 0 16px 0;
+    text-align: center;
+    line-height: 1.75;
+    color: #fff;
+    background-color: #8BAD78;
+}
+
+.plan .plan_item .plan_item_text a {
+    display: block;
+    text-align: center;
+    width: 80%;
+    line-height: 1.25;
+    margin: 48px auto 0 auto;
+    padding: 8px 0;
+    border-radius: 32px;
+    transition: .3s;
+    color: #fff;
+    background-color: #AD936F;
+}
+
+/* お役立ち記事 */
+.article {
+    padding: 80px 0 120px 0;
+    background-color: #D2EBFB;
+}
+
+.article ul li {
+    margin-bottom: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.article ul li a img {
+    display: block;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.article ul li a .article_item_text {
+    width: 90%;
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+.article ul li a .article_item_text h3 {
+    margin-bottom: 12px;
+    color: #8BAD78;
+}
+
+.article ul .article_btn {
+    display: block;
+    width: 320px;
+    line-height: 1.25;
+    padding: 8px 0px;
+    text-align: center;
+    margin: 64px auto 0 auto;
+    border-radius: 32px;
+    transition: .3s;
+    color: #fff;
+    background-color: #AD936F;
+}
+
+/* サイトマップ */
+.site_map {
+    padding: 80px 0;
+    background-color: #F0F9FF;
+}
+
+.site_map ul .upper,
+.site_map ul .middle,
+.site_map ul .lower {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.site_map ul li {
+    width: 30%;
+    height: 160px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    transition: .3s;
+    background-color: #AD936F;
+}
+
+.site_map ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 160px;
+}
+
+.site_map ul li a img {
+    display: block;
+    width: 64px;
+    margin: 24px auto 20px auto;
+}
+
+.site_map ul li a h3 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 1.25rem;
+    /* 20px */
+    color: #fff;
+}
+
+/* フッター */
+footer {
+    background-color: #809cad;
+}
+
+.footer {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    display: block;
+}
+
+.footer a img {
+    display: block;
+    width: 200px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.footer span {
+    display: block;
+    width: 100%;
+    font-size: 0.8125rem;
+    /* 13px */
+    text-align: center;
+    margin-top: 16px;
+    color: #fff;
+}
+
+/* タブレット画面以上 */
+@media (min-width: 765px) {
+
+    html {
+        font-size: 106%;
+    }
+
+    .inner {
+        margin: 0px 56px;
+    }
+
+    /* ヘッダーロゴ */
+    .header a {
+        margin-right: auto;
+    }
+
+    /* ヘッダーメニュー(SP非表示) */
+    .header .header_menu_sp {
+        display: none;
+    }
+
+    /* ヘッダーメニュー(PC表示) */
+    .header .header_menu_pc {
+        display: block;
+    }
+
+    .header .header_menu_pc ul {
+        display: flex;
+    }
+
+    .header .header_menu_pc ul li:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    .header .header_menu_pc ul li a {
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        transition: .3s;
+        color: #fff;
+    }
+
+    /* お知らせ項目 */
+
+    /* PC用のTOP */
+    .top .top_img_pc {
+        display: block;
+    }
+
+    /* スマホ用のTOP */
+    .top .top_img_sp {
+        display: none;
+    }
+
+    .top_news {
+        display: block;
+        position: absolute;
+        width: 480px;
+        bottom: 100px;
+        right: 0px;
+        padding: 12px 16px;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    .top_news li {
+        line-height: 1.6;
+    }
+
+    .top_news hr {
+        margin: 4px 0;
+        border: none;
+        border-top: 1px dashed #86a7adc8;
+    }
+
+    .top_news li a {
+        display: block;
+        font-size: 0.875rem;
+        /* 14px */
+        transition: .3s;
+        border-radius: 8px;
+        color: #5C5854;
+    }
+
+    .top_news li a span {
+        display: inline-block;
+        margin-right: 24px;
+    }
+
+    .day {
+        margin-left: 8px;
+        transition: .3s;
+    }
+
+    .new {
+        padding: 2px 8px;
+        background-color: #8BAD78;
+        color: #fff;
+    }
+
+    /* 波の区切り */
+    .wave img {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: -28px;
+        background-size: contain;
+        z-index: 5;
+    }
+
+    /* サブタイトル */
+    .subtitle h2 {
+        display: inline-block;
+    }
+
+    /* 特徴 */
+    .feature {
+        padding: 40px 0 160px 0;
+    }
+
+    /* 特徴_サブタイトル */
+    .feature .subtitle h2 {
+        margin: 0 0 24px 0;
+    }
+
+    .feature .feature_item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .feature .feature_item .feature_item_text {
+        width: 50%;
+        margin: 0 16px 0 0;
+    }
+
+    .feature .feature_item .feature_item_text h3,
+    .feature .feature_item .feature_item_text p {
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+
+
+    .feature .feature_item .feature_item_text p {
+        margin: 24px auto 32px auto;
+    }
+
+    .feature .feature_item .feature_item_img {
+        width: 50%;
+        margin: 0;
+    }
+
+    .feature .feature_item .feature_item_img img {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    /* 島内マップ */
+    .map {
+        position: relative;
+        z-index: 5;
+        padding: 40px 0 160px 0;
+    }
+
+    .map .map_item img {
+        width: 80%;
+    }
+
+    .map .map_item {
+        position: relative;
+    }
+
+    .map .map_item .map_item_sp {
+        display: none;
+    }
+
+    .map .map_item .map_item_pc {
+        display: block;
+    }
+
+    /* 観光地の詳細ボタン */
+    .map .map_item a {
+        position: absolute;
+        bottom: 32px;
+        right: 0;
+        display: block;
+        text-align: center;
+        line-height: 140px;
+        width: 140px;
+        height: 140px;
+        margin: 0 8vw 0 0;
+        padding: 0;
+        border-radius: 50%;
+        color: #fff;
+        background-color: #AD936F;
+    }
+
+    /* 観光プラン */
+    .plan .subtitle h2 {
+        margin: 0 0 96px 0;
+    }
+
+    .plan .plan_item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 64px;
+    }
+
+    /* プランごとの表記 */
+    .plan .plan_item::before {
+        left: -24px;
+        transform: scale(0.85);
+        /* X軸Y軸の大きさ */
+    }
+
+    .plan .plan_item .plan_item_img {
+        width: 50%;
+    }
+
+    .plan .plan_item .plan_item_img img {
+        margin: 0 auto;
+    }
+
+    .plan .plan_item .plan_item_text {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    /* お役立ち記事 */
+    .article ul li a {
+        display: flex;
+        align-items: center;
+        transition: .3s;
+    }
+
+    .article ul li a img {
+        width: 30%;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .article ul li a .article_item_text {
+        width: 70%;
+        padding: 0 40px;
+    }
+
+    /* フッター */
+    .footer {
+        align-items: baseline;
+    }
+
+    /* hover設定 */
+    /* hover時に背景色の変更 */
+    .header .header_menu_pc ul li a:hover {
+        background-color: #AD936F;
+    }
+
+    .top_news li a:hover {
+        color: #fff;
+        background-color: #AD936F;
+    }
+
+    .top_news li a:hover .day {
+        color: #fff;
+    }
+
+    .feature .feature_item .feature_item_text a:hover,
+    .map .map_item a:hover,
+    .plan .plan_item .plan_item_text a:hover,
+    .article ul .article_btn:hover,
+    .site_map ul li:hover {
+        background-color: #ac782f;
+    }
+
+    /* マップ */
+    .map .map_item a:hover {
+        transform: scale(1.2);
+        /* hover時に大きさ変更 */
+    }
+
+    /* お役立ち記事 */
+    /* hover時に少し透明化 */
+    .article ul li a:hover {
+        opacity: 0.7;
+    }
+
+}
+
+/* 800px以上 */
+@media (min-width: 900px) {
+
+    /* 観光地の詳細ボタン */
+    .map .map_item a {
+        margin: 0 12vw 0 0;
+    }
+
+}
+
+/* 1100px以上 */
+@media (min-width: 1100px) {
+    .inner {
+        margin: 0px 120px;
+    }
+
+    /* プランごとの表記 */
+    .plan .plan_item::before {
+        left: -8px;
+        transform: scale(1);
+        /* X軸Y軸の大きさ */
+    }
+
+}
